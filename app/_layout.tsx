@@ -40,6 +40,10 @@ export default function RootLayout() {
               name="(modal)/adjust-meditation-duration"
               options={{ headerShown: false, presentation: "modal" }}
             />
+            <Stack.Screen
+              name="(modal)/chapterchange"
+              options={{ headerShown: false, presentation: "modal" }}
+            />
           </Stack>
         </LanguageProvider>
       </ChapterProvider>

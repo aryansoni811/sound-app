@@ -7,6 +7,7 @@ import AppGradient from "@/components/AppGradient";
 import { useRouter } from "expo-router";
 import Animated, { FadeInDown, FadeInUp, withSpring } from "react-native-reanimated";
 import { Picker } from "@react-native-picker/picker";
+import i18n from "@/constants/i18n";
 // import { dantewadaLogo } from "../assets/dantewada-logo.png";
 
 import beachImage from "@/assets/dantewada-images/entry-image.jpg";
@@ -15,7 +16,7 @@ import { LanguageContext } from "@/context/LanguageContext";
 const App = () => {
   const router = useRouter();
 
-  const { Language, setLanguage } = useContext(LanguageContext);
+  const { language, setLanguage } = useContext(LanguageContext);
 
   return (
     <View className="flex-1">
@@ -47,7 +48,7 @@ const App = () => {
               <View className=" rounded-full border">
                 <Picker
                   className=" border border-black"
-                  selectedValue={Language}
+                  selectedValue={language}
                   onValueChange={(itemValue, itemIndex) => setLanguage(itemValue)}
                 >
                   <Picker.Item label="English" value="en" />

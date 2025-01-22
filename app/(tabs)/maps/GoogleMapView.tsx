@@ -2,6 +2,7 @@ import { StyleSheet, View, Text, Dimensions } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import { UserLocationContext } from "./context/UserLocationContext";
+import i18n from "@/constants/i18n";
 
 const GoogleMapView = () => {
   const [mapRegion, setMapRegion] = useState({
@@ -30,7 +31,7 @@ const GoogleMapView = () => {
 
   return (
     <View className="flex-1 flex-col justify-end">
-      <Text className="text-black text-2xl font-bold py-5 px-2">Map</Text>
+      <Text className="text-black text-2xl font-bold py-5 px-2">{i18n.t("map")}</Text>
       <MapView
         style={styles.map}
         provider={PROVIDER_GOOGLE}

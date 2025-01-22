@@ -21,7 +21,9 @@ const Page = () => {
         colors={["#A57C4D", "#fff5e5", "#fff5e588"]}
       >
         <View className="mb-6 pt-5">
-          <Text className="text-black mb-3 font-bold text-3xl text-left">{i18n.t("welcome")}</Text>
+          <Text className="text-black mb-3 font-bold text-3xl text-left leading-10">
+            {i18n.t("welcome")}
+          </Text>
           <Text className="text-black text-xl font-medium">{i18n.t("welcome_subtitle")} </Text>
         </View>
         <View>
@@ -45,8 +47,8 @@ const Page = () => {
                     colors={["transparent", "rgba(0,0,0,0.8)"]}
                     style={styles.gradient}
                   >
-                    <Text className="text-gray-100 text-3xl font-bold text-center">
-                      {item.title}
+                    <Text className="text-gray-100 text-3xl font-bold text-center leading-10">
+                      {i18n.t(item.title)}
                     </Text>
                   </LinearGradient>
                 </ImageBackground>

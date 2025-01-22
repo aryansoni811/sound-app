@@ -7,6 +7,7 @@ import { router, useLocalSearchParams } from "expo-router";
 import React, { useContext } from "react";
 import { Pressable, Text, View } from "react-native";
 import { MEDITATION_DATA } from "@/constants/MeditationData";
+import i18n from "@/constants/i18n";
 
 const changeCurrentChapter = () => {
   const { id } = useLocalSearchParams();
@@ -17,6 +18,7 @@ const changeCurrentChapter = () => {
     setChapter(chapter);
     router.back();
   };
+  const dataNumber = MEDITATION_DATA[Number(id) - 1];
 
   return (
     <View className="flex-1 relative">
@@ -29,27 +31,29 @@ const changeCurrentChapter = () => {
         </Pressable>
         <View className="justify-center h-4/5">
           <View>
-            <Text className="text-center font-bold text-3xl text-white mb-8">List of Chapters</Text>
+            <Text className="text-center font-bold text-3xl text-white mb-8">
+              {i18n.t("listOfChapter")}
+            </Text>
           </View>
 
           <View>
             <CustomButton
-              title={MEDITATION_DATA[Number(id) - 1].chaptersTitle[0]}
+              title={i18n.t(dataNumber.chaptersTitle[0])}
               onPress={() => handlePress(0)}
               containerStyles="mb-5"
             />
             <CustomButton
-              title={MEDITATION_DATA[Number(id) - 1].chaptersTitle[1]}
+              title={i18n.t(dataNumber.chaptersTitle[1])}
               onPress={() => handlePress(1)}
               containerStyles="mb-5"
             />
             <CustomButton
-              title={MEDITATION_DATA[Number(id) - 1].chaptersTitle[2]}
+              title={i18n.t(dataNumber.chaptersTitle[2])}
               onPress={() => handlePress(2)}
               containerStyles="mb-5"
             />
             <CustomButton
-              title={MEDITATION_DATA[Number(id) - 1].chaptersTitle[3]}
+              title={i18n.t(dataNumber.chaptersTitle[3])}
               onPress={() => handlePress(3)}
               containerStyles="mb-5"
             />

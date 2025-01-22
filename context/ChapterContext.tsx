@@ -6,7 +6,7 @@ export const ChapterContext = createContext({
 });
 
 export default function ChapterProvider({ children }: { children: React.ReactNode }) {
-  const [chapter, setChapter] = useState(1);
+  const [chapter, setChapter] = useState(0);
 
   return (
     <ChapterContext.Provider value={{ chapter, setChapter }}>{children}</ChapterContext.Provider>

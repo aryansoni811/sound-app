@@ -10,6 +10,7 @@ import MEDITATION_IMAGES from "@/constants/meditation-images";
 import { TimerContext } from "@/context/TimerContext";
 import { ChapterContext } from "@/context/ChapterContext";
 import { MEDITATION_DATA, AUDIO_FILES } from "@/constants/MeditationData";
+import i18n from "@/constants/i18n";
 
 const Page = () => {
   const { id } = useLocalSearchParams();
@@ -124,6 +125,7 @@ const Page = () => {
 
   const formattedTimeMinutes = String(Math.floor(secondsRemaining / 60)).padStart(2, "0");
   const formattedTimeSeconds = String(secondsRemaining % 60).padStart(2, "0");
+  const dataNumber = MEDITATION_DATA[Number(id) - 1];
 
   return (
     <View className="flex-1">
@@ -137,17 +139,13 @@ const Page = () => {
             <AntDesign name="leftcircleo" size={50} color="white" />
           </Pressable>
 
-          <View className="flex-1 justify-start gap-4 pt-24">
-            <Text className="text-white text-3xl font-bold">
-              {MEDITATION_DATA[Number(id) - 1].title}
+          <View className="flex-1 justify-start gap-3 pt-24">
+            <Text className="text-white text-3xl font-bold leading-10">
+              {i18n.t(dataNumber.title)}
             </Text>
-            <Text className="text-white text-lg">
-              {MEDITATION_DATA[Number(id) - 1].chaptersTitle[chapter]}
-            </Text>
+            <Text className="text-white text-lg">{i18n.t(dataNumber.chaptersTitle[chapter])}</Text>
             <ScrollView scrollEnabled={true} showsVerticalScrollIndicator={true}>
-              <Text className="text-white text-lg">
-                {MEDITATION_DATA[Number(id) - 1].description[chapter]}
-              </Text>
+              <Text className="text-white text-lg">{i18n.t(dataNumber.description[chapter])}</Text>
             </ScrollView>
           </View>
 

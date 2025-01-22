@@ -4,9 +4,12 @@ import { router, useLocalSearchParams } from "expo-router";
 import { View, Text, ImageBackground, Pressable, ScrollView, Image } from "react-native";
 import AFFIRMATION_GALLERY from "@/constants/affirmation-gallary";
 import AppGradient from "@/components/AppGradient";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { LanguageContext } from "@/context/LanguageContext";
 
 const AffirmationPractice = () => {
+  const { i18n } = useContext(LanguageContext);
+
   const { itemId } = useLocalSearchParams();
 
   const [affirmation, setAffirmation] = useState<GalleryPreviewData>();
@@ -42,7 +45,7 @@ const AffirmationPractice = () => {
         </Pressable>
         <View className="mt-20">
           <Text className="text-black text-2xl font-bold text-center pt-2">
-            {affirmation?.name}
+            {i18n.t(affirmation?.name)}
           </Text>
           <Image
             source={affirmation?.image}
@@ -58,7 +61,7 @@ const AffirmationPractice = () => {
           <View className="h-full border-white justify-end">
             {sentences.map((sentence, idx) => (
               <Text className="text-black text-xl mb-12 font-medium text-center" key={idx}>
-                {sentence}.
+                {i18n.t(sentence)}
               </Text>
             ))}
           </View>

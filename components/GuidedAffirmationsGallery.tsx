@@ -2,6 +2,8 @@ import { Image, View, Text, FlatList, Pressable, ImageBackground } from "react-n
 import images from "@/constants/affirmation-images";
 import { GalleryPreviewData, Product } from "@/constants/models/Product";
 import { Link } from "expo-router";
+import { useContext } from "react";
+import { LanguageContext } from "@/context/LanguageContext";
 
 interface GuidedAffirmationsGalleryProps {
   title: string;
@@ -9,10 +11,12 @@ interface GuidedAffirmationsGalleryProps {
 }
 
 const GuidedAffirmationsGallery = ({ title, products }: GuidedAffirmationsGalleryProps) => {
+  const { i18n } = useContext(LanguageContext);
+
   return (
     <View className="my-5">
       <View className="mb-2">
-        <Text className="text-black font-bold text-xl">{title}</Text>
+        <Text className="text-black font-bold text-xl">{i18n.t(title)}</Text>
       </View>
       <View className="space-y-2">
         <FlatList
@@ -30,7 +34,7 @@ const GuidedAffirmationsGallery = ({ title, products }: GuidedAffirmationsGaller
                   ></ImageBackground>
                   <View className=" bg-amber-800">
                     <Text className=" flex justify-center items-center font-bold text-white text-center">
-                      {item.name}
+                      {i18n.t(item.name)}
                     </Text>
                   </View>
                 </View>

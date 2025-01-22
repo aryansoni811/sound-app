@@ -2,30 +2,30 @@ import images from "@/constants/affirmation-images";
 
 const AFFIRMATION_GALLERY = [
   {
-    title: "Administration",
+    title: "administration",
     data: [
       {
         id: 1,
-        name: "Shri Mayank Chaturvedi",
-        text: "Collector and District Magistrate, Dantewada",
+        name: "collectorName",
+        text: "collectorDesc",
         image: images.mayank,
       },
       {
         id: 2,
-        name: "Shri Jayant Nayat",
-        text: "Chief Executive Officer Zila Panchayat Dantewada",
+        name: "ceoName",
+        text: "ceoDesc",
         image: images.jayant,
       },
       {
         id: 3,
-        name: "Shri Abhishek Tiwari",
-        text: "SDM, Dantewada",
+        name: "sdmName",
+        text: "sdmDesc",
         image: images.abhishek,
       },
       {
         id: 4,
-        name: "Shri Vineet Kumar Singh",
-        text: "Thesildar, Dantewada",
+        name: "tehsildarName",
+        text: "tehsildarDesc",
         image: images.thesildar,
       },
     ],
@@ -35,25 +35,25 @@ const AFFIRMATION_GALLERY = [
     data: [
       {
         id: 5,
-        name: "Dholkal",
+        name: "dholkal",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: images.englishCountrysideOne,
       },
       {
         id: 6,
-        name: "Barsoor",
+        name: "barsoor",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: images.englishCountrysideTwo,
       },
       {
         id: 7,
-        name: "Dantewada",
+        name: "dantewada",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: images.englishCountrysideThree,
       },
       {
         id: 8,
-        name: "Dantewada",
+        name: "muchnaar",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: images.englishCountrysideFour,
       },
@@ -64,25 +64,25 @@ const AFFIRMATION_GALLERY = [
     data: [
       {
         id: 9,
-        name: "Dholkal Jungle Camp",
+        name: "dholkalCamp",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: images.dholkal,
       },
       {
         id: 10,
-        name: "Muchnar Homestay",
+        name: "muchnaarHomestay",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: images.muchnaar,
       },
       {
         id: 11,
-        name: "Barsoor River Camp",
+        name: "barsoorCamp",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: images.mountainMeditateThree,
       },
       {
         id: 12,
-        name: "Dantewada Homestay",
+        name: "dantewadaHomestay",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: images.mountainMeditateFour,
       },
